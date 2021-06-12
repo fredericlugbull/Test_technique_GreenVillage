@@ -13,9 +13,16 @@ const App = () => (
   <div className="app">
     <h1>Liste des produits</h1>
       {/* Display of every product cards */}
-    {data.map((productCard) => {
+     
+     {/* { dataParsed = JSON.parse(data) }
+     <p>{dataParsed}</p> */}
+
+    {data.map((productCard, i) => {
       return (
-      productCard
+       <li key={i}>
+        <span>{productCard}</span>
+      </li>
+        
       )})}
   </div>
 );
