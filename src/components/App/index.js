@@ -1,15 +1,22 @@
 // == Import npm
 import React from 'react';
 
+// We import the data
+import data from 'src/data/data.json';
+
+
 // == Import
-import reactLogo from './react-logo.svg';
-import './styles.css';
+import './styles.scss';
 
 // == Composant
 const App = () => (
   <div className="app">
-    <img src={reactLogo} alt="react logo" />
-    <h1>Composant : App</h1>
+    <h1>Liste des produits</h1>
+      {/* Display of every product cards */}
+    {data.map((productCard) => {
+      return (
+      productCard
+      )})}
   </div>
 );
 
