@@ -1,6 +1,6 @@
 .app {
-  width: 500px;
-  margin: 1em auto;
+  margin: auto;
+  width: 100%;
   text-align: center;
 }
 
@@ -16,5 +16,33 @@ h1 {
 
 ul {
   border: 1px, black, solid;
+  width: 150px;
+  margin: 10px
 }
 
+li {
+  padding: 5px;
+}
+
+.productList{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-evenly;
+  width: 1200px;
+  margin: auto;
+}
+
+
+@media (max-width: 700px) {
+  .productList{
+    display: flex;
+    width: 300px;
+
+  }
+  .app {
+    margin: auto;
+    width: 10%;
+    text-align: center;
+  }
+}
