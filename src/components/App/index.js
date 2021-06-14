@@ -24,9 +24,13 @@ const App = () => {
 {/* I tried Object.keys(data).map here, and it renders 0, 1, 2, etc. And if I do Object.values(data).map, it renders the GVC lines one by one (one GVC ref by list item). Si je comprends bien l'exo, il faudrait que j'ajoute des guillemes avant et après les underscore, que je supprime les underscore, et qu'ensuite je transforme les chiffres stringés en numbers. */}
   {dataParsed.map((productCard, i) => {
     return (
-     <li key={i}>
-      <span>{productCard}</span>
-    </li>
+     <ul key={i}>
+       <li>Type: {productCard.T}</li>
+     <li>Type: {productCard.PLU}</li>
+     <li>Type: {productCard.CM}</li>
+     <li>Type: {productCard.VA}</li>
+  
+       </ul>
    )})}
 </div>
 );
