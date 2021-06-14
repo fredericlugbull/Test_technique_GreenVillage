@@ -13,7 +13,7 @@ const App = () => {
   // const parseCodeString = (code) => {{console.log("yo");}}
   /* return object */
 
-  const dataParsed = data.map(eachString => { return {name: eachString.slice(2)}});
+  const dataParsed = data.map(eachString => { return {T: eachString.charAt(6), PLU: parseInt( eachString.substring(12, 16)), CM: eachString  }});
   console.log("my parsed Data is:", dataParsed);
 
   return (
