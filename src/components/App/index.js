@@ -13,7 +13,7 @@ const App = () => {
   // const parseCodeString = (code) => {{console.log("yo");}}
   /* return object */
 
-  const dataParsed = data.map(eachString => { return {T: eachString.charAt(6), PLU: parseInt( eachString.substring(12, 16)), CM: eachString  }});
+  const dataParsed = data.map(eachString => { return {T: eachString.charAt(6), PLU: parseInt( eachString.substring(12, 16)), CM: eachString.substring(eachString.lastIndexOf("M:") + 2, eachString.lastIndexOf("_VA")), VA: eachString.substring(eachString.lastIndexOf("VA:") + 3, eachString.lastIndexOf("_C:")) }});
   console.log("my parsed Data is:", dataParsed);
 
   return (
